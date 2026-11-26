@@ -1,0 +1,148 @@
+/* Section */
+.container {
+  padding: 55px 7%;
+  background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+.topTravel {
+  text-align: left;
+  color: #f49f20;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.title {
+  text-align: center;
+  color: #123968;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.destinations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1250px;
+  margin: auto;
+}
+
+/* Card */
+.card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(20, 65, 110, 0.12);
+  border: 1px solid #e8eef5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 28px rgba(20, 65, 110, 0.2);
+}
+
+.image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.nom {
+  color: #123968;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.pays {
+  color: #0875c9;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.description {
+  color: #536273;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 14px;
+  flex: 1;
+}
+
+.prix {
+  color: #f49f20;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 16px;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btnDetails {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #123968;
+  color: white;
+  transition: all 0.25s ease;
+}
+
+.btnDetails:hover {
+  background-color: #0875c9;
+  transform: translateY(-2px);
+}
+
+/* Responsive - Tablets */
+@media (max-width: 950px) {
+  .destinations {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 600px) {
+  .container {
+    padding: 35px 5%;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .destinations {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    height: 190px;
+  }
+}
